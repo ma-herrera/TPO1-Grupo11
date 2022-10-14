@@ -1,0 +1,93 @@
+
+/* Constantes */
+:root {
+  --banner-bg-color: rgb(228, 211, 211);
+  --menu-bg-color: rgba(70, 7, 7, 0.9);
+  --submenu-bg-color: rgba(51, 9, 9, 0.9);
+  --footer-bg-color:  rgb(228, 211, 211);
+
+  --link-color: hsl(29, 73%, 61%);
+  --hover-link-color: hsl(10, 73%, 61%);
+  --active-link-color: hsl(10, 82%, 22%);
+  --link-font-size: 1rem;
+  --box-shadow-color: rgba(70, 7, 7, 0.5);
+  --box-shadow-color2: rgba(70, 7, 7, 0.3);
+
+  /* --font-family: 'Work Sans', sans-serif; */
+  --font-size: 1rem;
+  --footer-font-size: 0.7rem;
+
+  /* --header-font-family: 'EB Garamond', serif; */
+  --logo-height: 75px;
+
+  --box-shadow: 0rem 0rem 0.3rem var(--box-shadow-color), 0rem 0rem 0.5rem var(--box-shadow-color2);
+
+  --banner-padding: 0 0.6rem 0;
+  --banner-margin: 0 0rem 0.8rem 0;
+  /* banner-height= altura del logo + padding del banner + margin */
+  --banner-height: calc(var(--logo-height) + 0.8rem);
+  --banner-width: 100%;
+
+  --social-icon-height: 2rem;
+  --social-icon-margin: 0rem 1rem 1rem 1rem;
+  --footer-padding: 0.5rem 0.6rem 0.5rem;
+  /* --footer-margin: 0 0.6rem 0.8rem; */
+  /* footer-height= altura texto + altura iconos + margen iconos +footer padding + footer margin*/
+  --footer-height: calc(var(--font-size) + var(--social-icon-height) + 1rem + 1rem + 0.8rem);
+
+  --main-min-height: calc(100vh - (var(--banner-height)) - (var(--footer-height)));
+
+  /* valores globales */
+  --html-min-width: 440px;
+  --font-family: 'Work Sans', sans-serif;
+  --header-font-family: 'EB Garamond', serif;
+
+  /* main */
+  --aside-padding: 0.6rem;
+  --aside-bg-color: rgb(228, 211, 211);
+  --main-bg-color: white;
+}
+
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside{
+  background-color: rgb(218, 236, 230);
+  padding: 20px;
+  flex: 30px;
+  margin: 5px;
+
+}
+aside:hover{
+  border: 2px solid wheat;
+}
+section{
+  flex: 70px;
+  padding: 1Opx;
+  margin: 5px;
+}
+section h2{
+  text-align: center;
+}
+
+aside h2{
+  text-align: center;
+}
+
+.imagenblog{
+  width: 300px;
+  height: 300px;
+  border: 2px snow;
+  align-items: center;
+  justify-content: center;
+}
+.tituloprincipal h2,h3{
+  display: flex;
+  background-color: rgb(204, 187, 187);
+  flex-wrap: wrap;
+  padding: 3px;
+  text-align: center;
+}

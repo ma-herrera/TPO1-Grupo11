@@ -1,0 +1,179 @@
+/*------------------------- MAIN ------------------------*/
+.conteiner{
+    
+    padding: 0;
+    background-color: white;
+    margin-top: 0;
+    
+}
+.estancia{
+    background-image: url("Assets/images/10bis.jpg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    margin-top: -0.85%;
+}
+
+.a{
+    width:100%;
+    max-height:70%;
+    height: 50%;
+}
+
+.estancia .titulo {
+    position: absolute;
+    margin-top: 10px;
+}
+.estancia .subt{
+    margin-top: 35%;
+    position: absolute;
+    margin-left: 5%;
+    }
+
+.subt{
+    font-size: 1.7rem;
+    --header-font-family: 'EB Garamond', serif;
+    font-style: normal;
+    color: black;
+    
+
+}    
+
+.titulo{
+    font-size: 3.5rem;
+    --header-font-family: 'EB Garamond', serif;
+    font-style: oblique;
+    color: white;
+    text-shadow: 2.5px 2.5px rgb(80, 39, 80);/*Efecto de sombra*/
+    letter-spacing: 0.5rem;
+    animation: 12s infinite  slidein ease-in-out;/*declaramos la animacion*/
+}
+/* Damos animación al titulo*/
+@keyframes slidein {
+    from {
+      margin-left: 0%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 100%;
+      width: 100%;
+    }
+  }
+
+/* Main LaEstrella 1° Div Clase contenedor*/
+.contenedor{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    align-content: center;
+}
+
+    
+
+
+.par1{
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 55px;
+    margin-top: 75px;
+    width: 50%;
+    --font-family: 'Work Sans', sans-serif;
+    font-size: 0.8rem;
+    color: black;
+}
+.galeria{
+    
+    width: 40%;
+    height: 30%;
+	overflow: hidden;
+    margin-top: 95px;
+}
+.galeria ul {
+	display: flex;
+    padding: 0;
+	width: 700%; /*Son 7 fotos por el 100% de cada uno*/
+	animation: slide 30s infinite alternate ease-in-out;
+}
+
+.galeria li {
+	width: 50%;
+	list-style: none; /* Para que no aparezcan los puntos de la lista*/
+}
+
+.galeria img {
+	width: 100%; 
+    height: 80%;
+}
+ /*damos el movimiento la duracion del mismo son 7 fotos el 100% del tiempo divido la cantidad de fotos
+ y con margin left decimos que en cada mov. abarque toda la pantalla al desplazarse*/
+@keyframes slide {
+	0% {margin-left: 0;}
+	10% {margin-left: 0;}
+	
+	15% {margin-left: -100%;}
+	25% {margin-left: -100%;}
+	
+	30% {margin-left: -200%;}
+	40% {margin-left: -200%;}
+	
+	45% {margin-left: -300%;}
+	55% {margin-left: -300%;}
+
+    60% {margin-left: -400%;}
+	70% {margin-left: -400%;}
+
+    75% {margin-left: -500%;}
+	85% {margin-left: -500%;}
+	
+	90% {margin-left: -600%;}
+	100% {margin-left: -600%;}
+}
+
+.contenedor1{
+    
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    align-content: center;
+    
+}
+h3{
+    margin-top: 45px;
+}
+
+.ubi{
+    
+    --font-family: 'Work Sans', sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    color: black;
+    margin-top: 10px;
+
+    
+ }
+.mapa{
+    margin-top: 35px;
+    display: flex;
+    width: 40%;
+	overflow: hidden;
+    margin-right: 6%;
+    margin-bottom: 10px;
+    
+}
+.tran{
+    width: 50%;
+    margin-left: 0;
+    --font-family: 'Work Sans', sans-serif;
+    font-size: 0.8rem;
+    color: black;
+}
+ /*------------------------- FIN MAIN ------------------------*/

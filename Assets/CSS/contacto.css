@@ -1,0 +1,20 @@
+:root {
+    --social-icon-height: 2rem;
+    --social-icon-margin: 0rem 1rem 1rem 1rem;
+}
+
+
+/* iconos de redes sociales */
+/* .social-icons a img { */
+.contact__social-icons {
+    height: var(--social-icon-height);
+    margin: var(--social-icon-margin);
+}
+
+.ubicacion {
+    max-width: 90%;
+}
+
+.contact__body {
+    min-width: 440px;
+}
