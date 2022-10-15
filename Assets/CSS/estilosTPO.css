@@ -138,10 +138,19 @@ nav a, nav .material-symbols-outlined {
     text-decoration: none;
 }
 
-nav a:hover {
+a.menu__link.menu__link--inside:hover {
+    transform: unset;
     color: var(--hover-link-color);
+    font-size: 1.1rem;
     cursor: pointer;
 }
+
+.menu__link:hover, nav .material-symbols-outlined:hover {
+    color: var(--hover-link-color);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 nav a:active {
     color: var(--active-link-color);
@@ -300,11 +309,6 @@ nav a:active {
     color: black;
 }
 
-/* .epigrafe:hover {
-    background-color: rgba(95, 158, 160, 0.368);
-    background-color: hsla(29, 73%, 61%, 0.297);
-} */
-
 /*----------------------- FIN PRODUCTOS ------------------------*/
 
 /*--------------------------- FOOTER ----------------------------*/
@@ -369,7 +373,7 @@ footer a img {
     visibility: hidden;
     opacity: 0;
     /* visibility: visible;
-    opacity: 1; */
+    opacity: 1;  */
     
     z-index: 1;
     transition: all 0.3s;
@@ -563,6 +567,8 @@ footer a img {
         padding: 14px;
         visibility: hidden;
         opacity: 0;
+                /* visibility: visible;
+        opacity: 1; */
         z-index: 1;
         transition: all 0.3s;
         gap: 1em;
