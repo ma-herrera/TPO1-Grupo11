@@ -7,7 +7,7 @@
     
 }
 .estancia{
-    background-image: url("Assets/Images/10bis.jpg");
+    background-image: url("../Images/10bis.jpg");
     background-size: cover;
     position: relative;
     display: flex;
