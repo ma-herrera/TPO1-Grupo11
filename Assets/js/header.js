@@ -17,7 +17,7 @@ header.innerHTML =
             <a class="menu__link" id="excursiones">Excursiones</a>
             <ul class="menu__nesting">
                 <li class="menu__inside">
-                    <a class="menu__link menu__link--inside" href="./LaEstrella.html">Teatro</a>
+                    <a class="menu__link menu__link--inside" href="./teatros.html">Teatro</a>
                 </li>
                 <li class="menu__inside">
                     <a class="menu__link menu__link--inside" href="./LaEstrella.html">Estancia "La estrella"</a>
@@ -26,7 +26,7 @@ header.innerHTML =
                     <a class="menu__link menu__link--inside" href="./DeltaTour.html">Tigre</a>
                 </li>
                 <li class="menu__inside">
-                    <a class="menu__link menu__link--inside" href="./DeltaTour.html">Tour gaucho</a>
+                    <a class="menu__link menu__link--inside" href="./tourGaucho.html">Tour gaucho</a>
                 </li>
             </ul>
         </li>
