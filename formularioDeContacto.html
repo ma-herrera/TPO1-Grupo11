@@ -139,7 +139,8 @@
                     <div class="mb-3">    
                         <label for="cemail" class="form-label">Confirme su Email: </label>
                         <!-- <input type="cemail" class="form-control" name="cemail" id="cemail" placeholder="user@example.com" required> -->
-                        <input type="cemail" class="form-control" name="cemail" id="cemail" placeholder="user@example.com">
+                        <!-- autocomplete="off" no funciona. Usamos "nope" que es una valor invalido así el navegador no lo reconoce y no autocompleta -->
+                        <input type="cemail" class="form-control" name="cemail" id="cemail" placeholder="user@example.com" autocomplete="nope">
                     </div>
                     <!-- <p class="lead" id="validation_result"></p> -->
                     <p class="small text-danger" id="validation_result"></p>

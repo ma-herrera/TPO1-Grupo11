@@ -281,13 +281,13 @@ nav a:active {
     border: solid 3px brown;
 }
 
-.single-product-container:hover .titulo {
+.single-product-container:hover .tituloCard {
     /* transform: scale(1.1); */
     color: brown;
     font-size: 0.8rem;
 }
 
-.titulo {
+.tituloCard {
     color: black;
     color: var(--link-color);
     padding-bottom: 1em;
@@ -753,7 +753,7 @@ footer a img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 50vw;
+    width: 75vw;
     margin: auto;
 }
 
@@ -781,6 +781,7 @@ footer a img {
 
 .nosotros_section {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;

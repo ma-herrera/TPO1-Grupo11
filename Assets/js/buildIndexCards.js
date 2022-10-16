@@ -1,8 +1,8 @@
 const cardsData = [
-["./Assets/Images/BuenosAiresNocturna.jpg", "./teatro.html", "Noche de teatro y cena", "Una maravillosa noche disfrutando de una buena obra de teatro seguida de la cena en un restaurante del centro."],
+["./Assets/Images/BuenosAiresNocturna.jpg", "./teatros.html", "Noche de teatro y cena", "Una maravillosa noche disfrutando de una buena obra de teatro seguida de la cena en un restaurante del centro."],
 ["./Assets/Images/img5.jpg", "./LaEstrella.html", 'Tour estancia "La estrella"', 'Exquisito entorno natural ideal para el relax, cocina gourmet y atención personalizada'],
 ["./Assets/Images/17.jpg", "./DeltaTour.html", 'Descubra el Tigre a bordo de un barco', 'Recorrido turístico por la ciudad y paseo en barco por el Delta'],
-["./Assets/Images/img1.jpg", "./tourgaucho.html", 'Tour Gaucho de Un Día a Una Estancia', 'Descubra nuestras tradiciones de la mano de bailarines y jinetes profesionales y además degustando la mejor carne argentina']
+["./Assets/Images/img1.jpg", "./tourGaucho.html", 'Tour Gaucho de Un Día a Una Estancia', 'Descubra nuestras tradiciones de la mano de bailarines y jinetes profesionales y además degustando la mejor carne argentina']
 ]
 
 // Para pruebas de footer con menos cards
@@ -31,7 +31,7 @@ for (i=0; i<cardsData.length; i++) {
     var epigrafe = document.createElement('div');
     epigrafe.classList.toggle("epigrafe");
     epigrafe.innerHTML = `
-    <h2 class="titulo">` +  cardsData[i][2]  +  ` </h2>
+    <h2 class="tituloCard">` +  cardsData[i][2]  +  ` </h2>
     <p>`  + cardsData[i][3] + `    </p>
     `
 
