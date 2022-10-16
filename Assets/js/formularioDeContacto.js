@@ -23,7 +23,7 @@ async function handleSubmit(event) {
   let comentarios = document.querySelector("#comentarios");
   let email = document.querySelector("#email");
   let cemail = document.querySelector("#cemail");
-  let email_exp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+  let email_exp = /^\w+([\.-]\w+?)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
   // validar si los emails se corresponden con un formato válido
   let validation_status = "";
   if (nombre.value.length === 0)
