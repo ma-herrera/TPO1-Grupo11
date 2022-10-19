@@ -200,6 +200,8 @@ nav a:active {
     width: 50%;
     margin-top: 90px;
     margin-left: 5px;
+    font-family: 'Work Sans', sans-serif; ;
+    font-size: 0.8rem;
 }
 .galeria{
     float: right;
@@ -223,7 +225,7 @@ nav a:active {
 
 .galeria img {
 	width: 100%; 
-    height: 40%;
+    height: 70%;
 }
  /*damos el movimiento la duracion del mismo son 7 fotos el 100% del tiempo divido la cantidad de fotos
  y con margin left decimos que en cada mov. abarque toda la pantalla al desplazarse*/
@@ -249,6 +251,57 @@ nav a:active {
 	90% {margin-left: -600%;}
 	100% {margin-left: -600%;}
 }
+/*Boton de contacto*/
+.tboton {
+    border: 1px solid #2e518b; 
+    padding: 10px; 
+    background-color: #363b43; 
+    color: #ffffff; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 50px; 
+    box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
+	text-shadow: 1px 1px 1px rgba(255,255,255,.9); 
+    overflow-x: hidden; 
+    font-size: 0.8rem; 
+}
+.tboton:hover{
+    background-color: rgb(142, 142, 245);
+    color: black;
+}
+
+
+.contenedor2{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-around;
+   
+}
+
+.par2{
+    float: left;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.8rem;
+    
+}
+
+.contenedor > .video2{
+    float: right;
+    width: 40%;
+    height: 20%;
+    margin-top: 20px;
+    margin-right: 50px;
+    overflow: hidden;
+}  
 
 
 /*main {
