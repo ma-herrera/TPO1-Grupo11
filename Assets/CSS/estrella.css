@@ -5,6 +5,7 @@
     background-color: white;
     margin-top: 0;
     
+    
 }
 .estancia{
     background-image: url("../Images/10bis.jpg");
@@ -12,17 +13,21 @@
     position: relative;
     display: flex;
     margin-top: -0.85%;
+    overflow: hidden;
+    
 }
 
 .a{
     width:100%;
     max-height:70%;
     height: 50%;
+    
 }
 
 .estancia .titulo {
     position: absolute;
     margin-top: 10px;
+    overflow-x: hidden;
 }
 .estancia .subt{
     margin-top: 35%;
@@ -47,6 +52,8 @@
     text-shadow: 2.5px 2.5px rgb(80, 39, 80);/*Efecto de sombra*/
     letter-spacing: 0.5rem;
     animation: 12s infinite  slidein ease-in-out;/*declaramos la animacion*/
+    
+    
 }
 /* Damos animación al titulo*/
 @keyframes slidein {
@@ -144,6 +151,7 @@
     box-sizing: border-box;
     width: 100%;
     align-content: center;
+    justify-content: space-around;
     
 }
 h3{
@@ -163,17 +171,38 @@ h3{
 .mapa{
     margin-top: 35px;
     display: flex;
-    width: 40%;
+    width: 60%;
 	overflow: hidden;
-    margin-right: 6%;
+    margin-right: -8%;
     margin-bottom: 10px;
     
 }
 .tran{
-    width: 50%;
-    margin-left: 0;
+    width: 40%;
+    margin-left: 3%;
     --font-family: 'Work Sans', sans-serif;
     font-size: 0.8rem;
     color: black;
 }
+
+/*Boton de Mensaje*/
+.tboton {
+    border: 1px solid #2e518b; 
+    padding: 10px; 
+    background-color: #363b43; 
+    color: #ffffff; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 50px; 
+    box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
+	text-shadow: 1px 1px 1px rgba(255,255,255,.9); 
+     overflow-x: hidden;   
+    }
+.tboton:hover{
+    background-color: rgb(142, 142, 245);
+    color: black;
+}
+/*Fin de boton de Mensaje*/
+
  /*------------------------- FIN MAIN ------------------------*/
