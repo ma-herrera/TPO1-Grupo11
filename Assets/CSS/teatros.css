@@ -1,0 +1,796 @@
+:root {
+    --banner-bg-color: rgb(228, 211, 211);
+    --menu-bg-color: rgba(70, 7, 7, 0.9);
+    --submenu-bg-color: rgba(51, 9, 9, 0.9);
+    --footer-bg-color:  rgb(228, 211, 211);
+
+    --link-color: hsl(29, 73%, 61%);
+    --hover-link-color: hsl(10, 73%, 61%);
+    --active-link-color: hsl(10, 82%, 22%);
+    --link-font-size: 1rem;
+    --box-shadow-color: rgba(70, 7, 7, 0.5);
+    --box-shadow-color2: rgba(70, 7, 7, 0.3);
+
+    /* --font-family: 'Work Sans', sans-serif; */
+    --font-size: 1rem;
+    --footer-font-size: 0.7rem;
+
+    /* --header-font-family: 'EB Garamond', serif; */
+    --logo-height: 75px;
+
+    --box-shadow: 0rem 0rem 0.3rem var(--box-shadow-color), 0rem 0rem 0.5rem var(--box-shadow-color2);
+
+    --banner-padding: 0 0.6rem 0;
+    --banner-margin: 0 0rem 0.8rem 0;
+    /* banner-height= altura del logo + padding del banner + margin */
+    --banner-height: calc(var(--logo-height) + 0.8rem);
+    --banner-width: 100%;
+
+    --social-icon-height: 2rem;
+    --social-icon-margin: 0rem 1rem 1rem 1rem;
+    --footer-padding: 0.5rem 0.6rem 0.5rem;
+    /* --footer-margin: 0 0.6rem 0.8rem; */
+    /* footer-height= altura texto + altura iconos + margen iconos +footer padding + footer margin*/
+    --footer-height: calc(var(--font-size) + var(--social-icon-height) + 1rem + 1rem + 0.8rem);
+
+    --main-min-height: calc(100vh - (var(--banner-height)) - (var(--footer-height)));
+
+    /* valores globales */
+    --html-min-width: 440px;
+    --font-family: 'Work Sans', sans-serif;
+    --header-font-family: 'EB Garamond', serif;
+
+    /* main */
+    --aside-padding: 0.6rem;
+    --aside-bg-color: rgb(228, 211, 211);
+    --main-bg-color: white;
+}
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    /* box-sizing: border-box; */
+    min-width: var(--html-min-width);  /* restingimos el ancho mínimo para correcta visualizacion */
+    transition: all 0.3s;
+}
+
+ h1 {
+    /* font-style: italic; */
+    font-weight: 400;
+ }
+
+header, footer {
+    width: var(--banner-width);    
+    background-color: var(--banner-bg-color);
+    box-shadow: var(--box-shadow);
+    margin: var(--banner-margin);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--banner-padding);
+    font-family: var(--header-font-family);
+}
+
+.logo {
+    /* gap: 2em; */
+    align-items: center;
+    z-index: 1;
+    height: var(--logo-height);
+}    
+
+.logo p {
+    color: brown;
+    display: inline-block;
+    margin-left: 0.8em;
+}
+
+a img, a span {
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* .navmenu{  */
+/* nav > ul{  */
+/* parametros generales del menu */
+/* .navul{  */
+.menu__links{ 
+	display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+} 
+
+nav a, nav .material-symbols-outlined {
+    color: var(--link-color);
+    font-size: var(--link-font-size);    
+}
+
+
+.menu__item{
+    position: relative;
+}
+
+/* nav */
+/* a { */
+.menu__link {
+    transition-duration: 0.3s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--hover-link-color);
+    cursor: pointer;
+}
+
+nav a:active {
+    color: var(--active-link-color);
+}
+
+/************************ Menu hamburguesa ***************************/
+.btn-hamburguesa {
+    color: var(--link-color);
+    padding: 3px;
+    border: none;
+    background-color: var(--banner-bg-color); 
+    transition-duration: 0.3s;
+}
+
+.btn-hamburguesa i {
+    font-size: 60px;
+}
+
+.btn-hamburguesa:hover {
+    color: var(--hover-link-color);
+    cursor: pointer;
+}
+
+/* #menu-check {
+    display: none;
+} */
+
+/*body {
+    min-height: 100vh;
+}
+/*------------------------- MAIN ------------------------*/
+/*.conteiner{
+    
+    padding: 0;
+    background-color: white;
+    margin-top: 0;
+}*/
+.tconteiner h1{
+    margin-top: 10px;
+    text-align: center;
+    overflow-x: hidden;
+    font-family:'EB Garamond', serif;  
+    
+}
+.tcontenedor{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+.tpar1{
+    float: left;
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 5px;
+    font-family:'Work Sans', sans-serif; 
+    font-size: 0.8rem;
+}
+.tgaleria{
+    float: right;
+    width: 60%;
+    height: 40%;
+    margin-top: 30px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.tgaleria ul {
+	display: flex;
+    padding: 0;
+	width: 700%; /*Son 7 fotos por el 100% de cada uno*/
+	animation: slide 30s infinite alternate ease-in-out;
+}
+
+.tgaleria li {
+	width: 40%;
+	list-style: none; /* Para que no aparezcan los puntos de la lista*/
+}
+
+.tgaleria img {
+	width: 100%; 
+    height: 70%;
+}
+ /*damos el movimiento la duracion del mismo son 7 fotos el 100% del tiempo divido la cantidad de fotos
+ y con margin left decimos que en cada mov. abarque toda la pantalla al desplazarse*/
+@keyframes slide {
+	0% {margin-left: 0;}
+	10% {margin-left: 0;}
+	
+	15% {margin-left: -100%;}
+	25% {margin-left: -100%;}
+	
+	30% {margin-left: -200%;}
+	40% {margin-left: -200%;}
+	
+	45% {margin-left: -300%;}
+	55% {margin-left: -300%;}
+
+    60% {margin-left: -400%;}
+	70% {margin-left: -400%;}
+
+    75% {margin-left: -500%;}
+	85% {margin-left: -500%;}
+	
+	90% {margin-left: -600%;}
+	100% {margin-left: -600%;}
+}
+
+.tcontenedor2{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    
+    margin-top: -6%;
+    margin-right: 3%;
+}
+
+.tpar2{
+    float: left;
+    width: 50%;
+    margin-top: 45px;
+    margin-left: 5px;
+    font-family:'Work Sans', sans-serif; 
+    font-size: 1.5rem;
+}
+
+.tcontenedor > .tvideo2{
+    float: right;
+    width: 40%;
+    height: 20%;
+    margin-top: -130%;
+    margin-right: -7%;
+    padding: 3%;
+    overflow: hidden;
+}  
+/*Boton de Mensaje*/
+.tboton {
+    border: 1px solid #2e518b; 
+    padding: 10px; 
+    background-color: #363b43; 
+    color: #ffffff; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 50px; 
+    box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
+	text-shadow: 1px 1px 1px rgba(255,255,255,.9); 
+     overflow-x: hidden;   
+    }
+.tboton:hover{
+    background-color: rgb(142, 142, 245);
+    color: black;
+}
+/*Fin de boton de Mensaje*/
+
+/*main {
+    left: 2vw;
+    height: auto;
+    min-height: var(--main-min-height);
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+}
+
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.textAlignCenter {    
+    text-align: center;
+}
+
+.asideTitle {
+    font-family: var(--header-font-family);
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: brown;
+}
+
+body main aside {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 1rem 0vw 1rem 0vw;
+    background-color: var(--banner-bg-color);
+    padding: 1%;
+    border: none;
+    height: auto;
+}
+.aside__content {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 1%;
+    font-size: 0.5rem;
+    border: none;
+}
+.aside__element {
+    width: 100%;
+    padding: 2%;
+    /* display: block; */
+/*}*/
+
+
+/*------------------------- FIN MAIN ------------------------*/
+
+/*------------------------ PRODUCTOS -------------------------*/
+
+/*.multiple-product-container {
+    /* margin: 0 2vw 0 2vw; */
+  /*  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-product-container {
+    border: solid 2px black;
+    margin: 2vw;
+    padding: 2vw;
+    height: calc((100vw - 4vw ) / 2);
+    width: calc(100vw - 4vw );
+    transition: all 0.3s;
+}
+
+.product-img {
+    background-color: aquamarine;
+    /* background-image: url("../Images/BuenosAiresNocturna.jpg"); */
+    /*width: 50%;
+    height: 100%;
+    background-position: center; /* Center the image */
+   /*background-repeat: no-repeat; /* Do not repeat the image */
+   /* background-size: cover; /* Resize the background image to cover the entire container */
+   /* float: left;
+}
+
+.single-product-container:hover {
+    /* transform: scale(1.1); */
+   /* transform: scaleY(1.05);
+    border: solid 3px brown;
+}
+
+.single-product-container:hover .titulo {
+    /* transform: scale(1.1); */
+   /* color: brown;
+    font-size: 0.8rem;
+}
+
+.titulo {
+    color: black;
+    color: var(--link-color);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 2px black solid;
+}
+
+.epigrafe {
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+}
+
+.epigrafe p {
+    width: 100%;
+    color: black;
+}
+
+/* .epigrafe:hover {
+    background-color: rgba(95, 158, 160, 0.368);
+    background-color: hsla(29, 73%, 61%, 0.297);
+} */
+
+/*----------------------- FIN PRODUCTOS ------------------------*/
+
+/*--------------------------- FOOTER ----------------------------*/
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    padding: var(--footer-padding);
+    font-size: var(--footer-font-size);
+}
+
+/* iconos de redes sociales */
+footer a img {
+    height: var(--social-icon-height);
+    margin: var(--social-icon-margin);
+}
+
+/*------------------------- FIN FOOTER --------------------------*/
+
+
+
+/* FORMATO POR DEFAULT: CELULAR -  */
+
+ 
+    /* ocultamos el menú de navegación a la derecha de la ventana */
+    header nav{
+        height: var(--main-min-height);
+
+        width: 100%;
+        width: 40%;
+
+        top: var(--banner-height);    /*-total*/
+        position: fixed;
+        right: -100%;
+        /* right: 0%;  para probar lo pongo visible */
+        z-index: 1;
+        transition-duration: 0.3s;
+        background-color: var(--menu-bg-color);
+        font-size: 2rem;
+    }    
+
+    .menu__links {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        max-width: 40vw;
+        justify-content: center;
+    }
+   
+
+/* SUB-MENU */
+
+.menu__nesting {
+    width: 100%;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: var(--menu-bg-color);
+    right: 20vw;
+    top: 10px;
+    /* padding-top: 5px; */
+    
+    visibility: hidden;
+    opacity: 0;
+    /* visibility: visible;
+    opacity: 1; */
+    
+    z-index: 1;
+    transition: all 0.3s;
+    gap: 0.3rem;
+    align-items: center;
+    background-color: rgb(165, 42, 42);
+box-shadow: var(--box-shadow);
+}
+
+
+    nav.mostrar {
+        right: 0;
+        transition-duration: 0.3s;
+    }
+
+    .menu__item--show:hover > .menu__nesting {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    
+
+@media only screen and (max-width: 767.90px) {
+    header nav:before {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 15px solid var(--submenu-bg-color);
+        position: absolute;
+        top: -14px;
+        right: 43%;
+        right: 10%;
+    }
+    
+    .menu__nesting:after {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 15px solid brown;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        position: absolute;
+        top: 10%;
+        right: -14px;
+    }
+}
+
+
+
+/* .menu__item--active {
+    background-color: black;     
+    transition: 0.3s;
+}
+
+.menu__item--show{
+    background-color: antiquewhite ;
+} */
+
+/* } *//* FIN CELULAR */
+
+/*+++++++++++++ MEDIA QUERYS ++++++++++++++*/
+
+/* TABLET */
+@media only screen and (min-width: 440px) and (max-width: 767.90px) {
+    body main aside {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 1rem 0vw 1rem 0vw;
+        background-color: var(--banner-bg-color);
+        padding: 1%;
+        border: none;
+        height: auto;
+    }
+    .aside__content {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* margin: 1rem 0vw 1rem 0vw; */
+        padding: 1%;
+        font-size: 0.5rem;
+        border: none;
+        /* flex-grow: 40%; */
+    }
+    .aside__element {
+        width: 50%;
+        padding: 2%;
+        /* display: block; */
+    }
+
+}
+/* FIN TABLET */
+
+
+/* DESKTOP */
+@media only screen and (min-width: 768px){
+
+    .banner {
+        justify-content:space-between;
+        align-items: center;
+        background-color: var(--banner-bg-color);
+        box-shadow: var(--box-shadow);
+        padding: var(--banner-padding);
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1em;
+        align-items: center;
+        z-index: 1;
+        height: var(--logo-height);
+    }    
+
+    /*slogan*/
+    .logo p {
+        font-size: 1.3em;
+        color: brown;
+    }
+
+    .btn-hamburguesa {
+        display: none;
+    }
+
+
+    /*--------------- MENU PRINCIPAL DESKTOP ---------------*/
+    header > nav{
+        width: fit-content;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0%;
+        left: 0%;
+        z-index: 1;
+        margin: 10px;
+        justify-content: space-between;
+        font-size: 1rem;
+        height:  var(--banner-height);
+    }	
+
+    .menu__links {
+        gap: 0.8rem;
+        flex-direction: row;
+        background-color: var(--banner-bg-color);
+        padding: 10px;
+        padding-right: 0;
+        width: fit-content;
+        height: 100%;
+    }
+
+    nav > ul > li {
+        display: flex;
+        position: relative;
+        height: 100%;
+    }
+
+
+    nav > ul > li > a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        
+        align-items: center;
+        /* height: var(--logo-height); */
+    }
+
+    /*-------------- SUB-MENU DESKTOP -----------------*/
+    .menu__nesting:before {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 15px solid var(--submenu-bg-color);
+        position: absolute;
+        top: -14px;
+        right: 43%;
+    }
+
+    .menu__nesting {
+        width: 200px;
+        right: -90%;
+        background: var(--menu-bg-color);
+        top: var(--banner-height) ;
+        padding: 14px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        transition: all 0.3s;
+        gap: 1em;
+    }
+
+
+    header nav:before, .menu__nesting:after {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 0;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+
+    nav ul li:hover ul {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .mostrarSubmenu {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+
+/*----------------- MAIN DESKTOP ------------------*/
+    main {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1.5%;
+        width: 100%;
+    }
+
+    .maincontent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80%;
+    }
+
+/*----------------- ASIDE DESKTOP ------------------*/
+
+
+    body main aside {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 19%;
+        margin: 0 0%  1% 1%;
+        background-color: var(--aside-bg-color) ;
+        padding: var(--aside-padding);
+        height: fit-content;
+        font-size: 0.5rem;
+        border: none;
+    }
+/*--------------------------------*/
+aside__content {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* margin: 1rem 0vw 1rem 0vw; */
+   padding: 1%;
+    font-size: 0.5rem;
+    border: none;
+    /* flex-grow: 40%; */
+}
+aside__element {
+    width: 100%;
+    padding: 2%;
+    /* display: block; */
+}
+
+
+/*--------------- CARDS DESKTOP ---------------*/
+
+    .multiple-product-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        row-gap: 1vw;
+        margin: 0 0vw 0 0vw;
+        /* prueba agrego wid */
+        /* width: 80vw; */
+    }
+    
+    .single-product-container {
+        border: solid 1px black;
+        margin: 1vw 1vw 1vw 0;
+        padding: 1vw;
+        width: 36vw;
+        height: 18vw;    
+    }
+
+
+}
+/* FIN DESKTOP */
+
