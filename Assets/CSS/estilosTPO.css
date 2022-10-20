@@ -298,7 +298,7 @@ nav a:active {
     height: 100%;
     overflow-y: scroll;
     padding: 0.5rem;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .epigrafe p {
@@ -457,7 +457,7 @@ footer a img {
         flex-wrap: wrap;
         /* margin: 1rem 0vw 1rem 0vw; */
         padding: 1%;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         border: none;
         /* flex-grow: 40%; */
     }
@@ -638,7 +638,7 @@ footer a img {
     flex-wrap: wrap;
     /* margin: 1rem 0vw 1rem 0vw; */
     padding: 1%;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     border: none;
     /* flex-grow: 40%; */
 }
