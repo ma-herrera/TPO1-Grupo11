@@ -60,15 +60,17 @@ async function handleSubmit(event) {
   else
   // enviar el mail via formspree
   {
+    var p = document.querySelector("#validation_result");
+    p.innerHTML = "";
     /* usamos el campo del formulario status para mostrar los mensajes de resultado */
     var status = document.getElementById("result-msg"); 
 
     var data = new FormData(form); 
     
   // PARA TESTEAR DEJAR ESTA LINEA COMENTADA (para no gastar los mails gratis de formspree):
-    // await fetch("https://formspree.io/f/xgeqyddv", {  
+    await fetch("https://formspree.io/f/xgeqyddv", {  
   //PARA PRODUCCION DESCOMENTAR LA LINEA DE ARRIBA Y COMENTAR LA DE ABAJO:
-    await fetch("", {  
+    // await fetch("", {  
       /*
     action: formspree...
     method: post
